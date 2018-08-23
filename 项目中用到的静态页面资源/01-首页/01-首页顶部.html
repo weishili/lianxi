@@ -1,9 +1,12 @@
-
-<template>
-  <div id="app">
-
-    <div>
-       <div class="header">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页顶部</title>
+    <link rel="stylesheet" type="text/css" href="../statics/site/css/style.css">
+</head>
+<body>
+    <div class="header">
         <!-- 1.0 导航栏头部 -->
         <div class="head-top">
             <div class="section">
@@ -82,71 +85,5 @@
             </div>
         </div>
     </div>
-
-       <div class="footer">
-                <div class="section">
-                    <div class="foot-nav">
-                        <a href="">关于我们</a>
-                        <strong>|</strong>
-                        <a href="">联系我们</a>
-                        <strong>|</strong>
-                        <a href="">联系客服</a>
-                        <strong>|</strong>
-                        <a href="">合作招商</a>
-                        <strong>|</strong>
-                        <a href="">商家帮助</a>
-                        <strong>|</strong>
-                        <a href="">营销中心</a>
-                        <strong>|</strong>
-                        <a href="">隐私政策</a>
-                    </div>
-                    <div class="foot-box">
-                        <div class="copyright">
-                            <p>版权所有 黑马买买买 </p>
-                            <p>公司地址： 联系电话：</p>
-                            <p class="gray">Copyright © 2009-2018 itcast Corporation,All Rights Reserved.</p>
-                        </div>
-                        <div class="service">
-                            <p>周一至周日 9:00-24:00</p>
-                            <a href="#">
-                                <i class="iconfont icon-phone"></i>在线客服</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-     </div>
-
-    </div>
-
-</template>
-
-<script>
-import $ from 'jquery';
-export default {
-  name: 'container',
-}
-
-
-//jquery控制鼠标移入teb栏的切换
-$(document).ready(function() {
-	$("#menu2 li a").wrapInner( '<span class="out"></span>' );
-	$("#menu2 li a").each(function() {
-		$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
-	});
-
-	$("#menu2 li a").hover(function() {
-		$(".out",	this).stop().animate({'top':	'48px'},	300); // move down - hide
-		$(".over",	this).stop().animate({'top':	'0px'},		300); // move down - show
-
-	}, function() {
-		$(".out",	this).stop().animate({'top':	'0px'},		300); // move up - show
-		$(".over",	this).stop().animate({'top':	'-48px'},	300); // move up - hide
-	});
-
-});
-</script>
-
-<style>
-@import  url('../项目中用到的静态页面资源/statics/site/css/style.css');
-@import url('../项目中用到的静态页面资源/jquery插件/hoverNav20151228/css/style.css');
-</style>
+</body>
+</html>
